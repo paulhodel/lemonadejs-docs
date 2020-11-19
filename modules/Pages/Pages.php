@@ -53,11 +53,16 @@ class Pages extends Module
 
             // View
             $view = isset($page['view']) && $page['view'] ? $page['view'] : $route;
-
-            // Pages
-            $this->view['pages'] = $this->service->getPages();
-            $this->setView($view);
         }
+
+        // Try to find the view
+        if (! isset($view)) {
+            $view = $this->getParam(1) . '/' . $this->getParam(2);
+        }
+
+        // Pages
+        $this->view['pages'] = $this->service->getPages();
+        $this->setView($view);
     }
 
     public function logo()

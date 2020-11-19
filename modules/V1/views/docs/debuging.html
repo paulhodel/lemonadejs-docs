@@ -1,33 +1,11 @@
 <div class="section">
 <div class="section-content">
 
-<h1>Lemonadejs: Javascript Library</h1>
-
-<div class='row justify'>
-<div class='column f1'>
-Lemonadejs is a super lightweight vanilla javascript micro library (3Kb). It aims to help the integration between the JavaScript (controllers) and the HTML (view). It supports two-way binding and integrates nativelly with Jsuites to help developers in creating amazing interfaces.<br><br>
-
-Lemonadejs will help you to deliver really reusable components, and does not require transpilers, babel or hundreds of other dependencies and work just fine in any javascript dev environment.
-
-Lemonadejs is keeps helps the strategy of develoment, keeps a familiar way of coding, and you will create code very close to native JS. 
-
-<ul>
-<li>Make rich and user-friendly web interfaces and applications</li>
-<li>Handle complicated data inputs with ease and convenience</li>
-<li>Improve software user experience</li>
-<li>Create rich CRUDS and beautiful UI</li>
-<li>Highly flexible and customizable</li>
-<li>Lightweight and simple to use</li>
-</ul>
-
-
-</div><div class='column f1'>
-    <img src='img/home.png' style='width:100%; max-width: 640px;'>
-</div>
-</div>
+<h1>Lemonadejs</h1>
 
 <p>
-
+jExcel is a super lightweight vanilla javascript library (3Kb) to help deliver reusable components. It does not require
+transpilers, babel or hundreds of other dependencies and work just fine in any javascript dev environment.
 </p>
 
 <div id='root' class='p20 input'></div>
@@ -69,10 +47,7 @@ function Component() {
  
     return lemonade.element(template, self);
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    lemonade.render(Component, document.getElementById('root'));
-});
+lemonade.render(Component, document.getElementById('root'))
 </script>
 
 <ul>
