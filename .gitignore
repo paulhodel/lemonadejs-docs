@@ -1,2 +1,4 @@
 /.project
 /.buildpath
+/vendor/
+/composer.lock

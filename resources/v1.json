@@ -1,1 +1,18 @@
-{}
+[
+    {
+        "url": "v1",
+        "link": "Lemonade JS",
+        "title": "The javascript library",
+        "keywords": "Two-way binding javascript micro library.",
+        "description": "Create amazing web applications with lemonadejs.",
+        "view": "home"
+    },
+    {
+        "url": "v7/register",
+        "link": "jExcel Pro Download",
+        "label": "Download your copy of jExcel Pro Edition",
+        "title": "The javascript professional spreadsheet",
+        "keywords": "Jexcel, javascript, excel-like, spreadsheet, table, grid",
+        "description": "Register and download a copy of jExcel Pro Edition."
+    }
+]

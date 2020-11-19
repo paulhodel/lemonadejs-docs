@@ -74,8 +74,8 @@ if (APPLICATION_ENV == 'production') {
     define('DB_CONFIG_NAME', '');
 
     // Redis
-    define('REDIS_CONFIG_HOST', 'localhost');
-    define('REDIS_CONFIG_PORT', '6379');
+    define('REDIS_CONFIG_HOST', '');
+    define('REDIS_CONFIG_PORT', '');
 } else {
     // Disable all reporting
     ini_set('error_reporting', E_ALL);
@@ -89,6 +89,6 @@ if (APPLICATION_ENV == 'production') {
     define('DB_CONFIG_NAME', '');
 
     // Redis
-    define('REDIS_CONFIG_HOST', 'redis');
-    define('REDIS_CONFIG_PORT', '6379');
+    define('REDIS_CONFIG_HOST', '');
+    define('REDIS_CONFIG_PORT', '');
 }

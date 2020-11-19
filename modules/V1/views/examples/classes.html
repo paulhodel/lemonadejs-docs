@@ -1,0 +1,48 @@
+<div class="section">
+<div class="section-content">
+
+<h1>Classes</h1>
+
+<div id='root' class='p20 input'></div>
+
+<h2>Source code</h2>
+
+<pre class="prettyprint linenums">
+&#60;html>
+&#60;script src="https://bossanova.uk/naturaljs/v1/naturaljs.js">&#60;/script>
+
+&#60;div id='root'>&#60;/div>
+
+&#60;script>
+
+&#60;/script>
+&#60;/html>
+</pre>
+
+<script>
+class Chat extends natural.component {
+    constructor(o) {
+        super();
+        this.count = 1;
+    }
+
+    ready(element) {
+        // Execute when is ready
+    }
+
+    counter() {
+        this.count++;
+    }
+
+    render() {
+        return `
+            <div>{{self.count}}</div>
+            <input type='button' onclick="self.counter()" value='Go'/>
+        `;
+    }
+}
+
+natural.render(Chat, document.getElementById('root'));
+</script>
+</div>
+</div>

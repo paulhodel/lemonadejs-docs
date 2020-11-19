@@ -1,0 +1,50 @@
+<div class="section">
+<div class="section-content">
+
+<h1>HTML Elements</h1>
+
+<div id='root' class='p20 input'></div>
+
+<pre class="prettyprint linenums">
+&#60;html>
+&#60;script src="https://bossanova.uk/naturaljs/v1/naturaljs.js">&#60;/script>
+
+&#60;div id='root'>&#60;/div>
+
+&#60;script>
+var myComponent = (function() {
+    var self = {};
+    self.name = 'Paul Hodel';
+    self.valid = true;
+
+    var template = `&#60;div>
+        &#60;label>&#60;input type="text" value="1" @bind="self.name" />&#60;/label>
+        &#60;label>&#60;input type="checkbox" value="1" @bind="self.valid" /> Checkbox test&#60;/label>
+    &#60;/div>`;
+
+    return natural.element(template, self);
+});
+
+natural.render(myComponent, document.getElementById('root'));
+&#60;/script>
+&#60;/html>
+</pre>
+
+<script>
+var myComponent = (function() {
+    var self = {};
+    self.name = 'Paul Hodel';
+    self.valid = true;
+
+    var template = `<div>
+        <label><input type="text" @bind="self.name"></label><br/>
+        <label><input type="checkbox" value="1" @bind="self.valid"> Checkbox test</label><br/>
+    </div>`;
+
+    return natural.element(template, self);
+});
+
+natural.render(myComponent, document.getElementById('root'));
+</script>
+</div>
+</div>

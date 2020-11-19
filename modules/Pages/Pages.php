@@ -37,13 +37,13 @@ class Pages extends Module
 
     public function __default()
     {
-        $route = [];
-        if ($this->getParam(0)) $route[] = $this->getParam(0);
-        if ($this->getParam(1)) $route[] = $this->getParam(1);
-        if ($this->getParam(2)) $route[] = $this->getParam(2);
-        if ($this->getParam(3)) $route[] = $this->getParam(3);
-        $route = implode('/', $route);
+        // Get request route
+        $route = implode('/', Render::$urlParam);
+
+        // Get associate pages from the JSON
         $page = $this->service->getPage($route);
+
+        // If a page is found
         if ($page) {
             $page['author'] = 'Paul Hodel';
             $this->setTitle($page['title']);
@@ -51,16 +51,9 @@ class Pages extends Module
             $this->setKeywords($page['keywords']);
             $this->setAuthor($page['author']);
 
-            $route = [];
-            if ($this->getParam(1)) $route[] = $this->getParam(1);
-            if ($this->getParam(2)) $route[] = $this->getParam(2);
-            if ($this->getParam(3)) $route[] = $this->getParam(3);
-            $route = implode('/', $route);
-
+            // View
             $view = isset($page['view']) && $page['view'] ? $page['view'] : $route;
-            if ($index = $this->getIndex($view)) {
-                $this->view['index'] = $index;
-            }
+
             // Pages
             $this->view['pages'] = $this->service->getPages();
             $this->setView($view);
