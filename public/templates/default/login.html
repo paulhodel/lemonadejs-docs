@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name='viewport' id="viewport" content='width=device-width,initial-scale=1,user-scalable=no' />
+    <meta name='format-detection' content = "telephone=no" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+    <meta itemprop="name" content="jExcel">
+    <meta itemprop="image" content="https://jexcel.net/logo.png">
+    <meta itemprop="url" content="https://jexcel.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="jExcel Pro">
+    <meta property="og:url" content="https://jexcel.net">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://jexcel.net/logo.png">
+
+    <link rel="icon" href="https://jexcel.net/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Material+Icons|Oswald" />
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/v7/jsuites.css" type="text/css" />
+    <link rel="stylesheet" href="/v7/jsuites.layout.css" type="text/css" />
+    <link rel="stylesheet" href="/v7/jsuites.mobile.css" type="text/css" />
+
+</head>
+<body>
+
+<div id="login"></div>
+
+<script type="text/javascript" src="/v7/jsuites.js"></script>
+<script type="text/javascript" src="/v7/jsuites.layout.js"></script>
+<script type="text/javascript" src="/v7/jsuites.mobile.js"></script>
+
+<script>
+    jSuites.login(document.getElementById('login'), {
+        url: '/me/login',
+        facebookUrl: '/me/facebook',
+        logo: 'img/logo-c.svg',
+        newProfile: false,
+        newProfileLogin: false,
+        fullscreen: true,
+        onload: function(data) {
+            if (data.success == 1) {
+                window.open('/me', '_top');
+            }
+        },
+        onerror: function(error) {
+            if (error && error.message) {
+                jSuites.notification({
+                    message: error.message,
+                });
+            } else {
+                jSuites.notification({
+                    message: 'One error happened in your login service',
+                });
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+    "name" : "paulhodel/lemonadejs",
+    "description" : "The javascript library",
+    "keywords" : [
+        "Two-way binding"
+    ],
+    "license" : "NO-LICENCE",
+    "type" : "project",
+    "authors" : [{
+            "name" : "Paul Hodel",
+            "email" : "paul.hodel@gmail.com"
+        }
+    ],
+    "require" : {
+        "bossanova/bossanova" : "v5.0.0.x-dev",
+        "phpmailer/phpmailer": "dev-master"
+    },
+    "autoload-dev" : {},
+    "minimum-stability": "dev"
+}

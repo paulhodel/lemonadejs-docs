@@ -1,0 +1,15 @@
+web:
+  build: ./resources/docker/aws
+  ports:
+    - 8002:80
+  volumes:
+    - .:/var/www/html
+  links:
+    - php
+
+php:
+  build: ./resources/docker/php
+  ports:
+    - 9000
+  volumes:
+    - .:/var/www/html
