@@ -57,7 +57,11 @@ class Pages extends Module
 
         // Try to find the view
         if (! isset($view)) {
-            $view = $this->getParam(1) . '/' . $this->getParam(2);
+            if ($this->getParam(2)) {
+                $view = $this->getParam(1) . '/' . $this->getParam(2);
+            } else {
+                $view = $this->getParam(1);
+            }
         }
 
         // Pages
